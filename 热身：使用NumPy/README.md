@@ -1,15 +1,17 @@
 # 热身：使用NumPy
 
-在介绍PyTorch之前，我们将首先使用NumPy实现网络。
+在介绍 PyTorch 之前，我们将首先使用 NumPy 实现网络。
 
-NumPy提供了一个n维数组对象和许多用于操作这些数组的函数。NumPy是用于科学计算的通用框架；它对计算图、深度学习和梯度一无所知。然而，我们可以很容易地使用NumPy，手动实现网络的前向和反向传播，来拟合随机数据：
+NumPy 提供了一个n维数组对象和许多用于操作这些数组的函数。
+NumPy 是用于科学计算的通用框架；它对计算图、深度学习和梯度一无所知。
+然而，我们可以很容易地使用 NumPy，手动实现网络的前向和反向传播，来拟合随机数据：
 
 ```python
 # 可运行代码见本文件夹中的 two_layer_net_numpy.py
 import numpy as np
 
-# N是批大小；D_in是输入维度
-# H是隐藏层维度；D_out是输出维度  
+# N 是批大小；D_in 是输入维度
+# H 是隐藏层维度；D_out 是输出维度  
 N, D_in, H, D_out = 64, 1000, 100, 10
 
 # 产生随机输入和输出数据
@@ -21,6 +23,7 @@ w1 = np.random.randn(D_in, H)
 w2 = np.random.randn(H, D_out)
 
 learning_rate = 1e-6
+
 for t in range(500):
     # 前向传播：计算预测值y
     h = x.dot(w1)

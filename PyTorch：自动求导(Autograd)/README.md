@@ -2,9 +2,11 @@
 
 在上面的例子里，需要我们手动实现神经网络的前向和后向传播。对于简单的两层网络，手动实现前向、后向传播不是什么难事，但是对于大型的复杂网络就比较麻烦了。 
 
-庆幸的是，我们可以使用[自动微分](https://en.wikipedia.org/wiki/Automatic_differentiation)来自动完成神经网络中反向传播的计算。PyTorch中**autograd**包提供的正是这个功能。当使用autograd时，网络前向传播将定义一个**计算图**；图中的节点是tensor，边是函数，这些函数是输出tensor到输入tensor的映射。这张计算图使得在网络中反向传播时梯度的计算十分简单。 
+庆幸的是，我们可以使用 [自动微分](https://en.wikipedia.org/wiki/Automatic_differentiation) 来自动完成神经网络中反向传播的计算。
 
-这听起来复杂，但是实际操作很简单。如果我们想计算某些的tensor的梯度，我们只需要在建立这个tensor时加入这么一句：`requires_grad=True`。这个tensor上的任何PyTorch的操作都将构造一个计算图，从而允许我们稍后在图中执行反向传播。如果这个tensor`x`的`requires_grad=True`，那么反向传播之后`x.grad`将会是另一个张量，其为`x`关于某个标量值的梯度。
+PyTorch中**autograd**包提供的正是这个功能。当使用 autograd 时，网络前向传播将定义一个**计算图**；图中的节点是 tensor，边是函数，这些函数是输出 tensor 到输入 tensor 的映射。这张计算图使得在网络中反向传播时梯度的计算十分简单。 
+
+这听起来复杂，但是实际操作很简单。如果我们想计算某些的 tensor 的梯度，我们只需要在建立这个 tensor 时加入这么一句：`requires_grad=True`。这个tensor上的任何PyTorch的操作都将构造一个计算图，从而允许我们稍后在图中执行反向传播。如果这个tensor`x`的`requires_grad=True`，那么反向传播之后`x.grad`将会是另一个张量，其为`x`关于某个标量值的梯度。
 
 有时可能希望防止PyTorch在`requires_grad=True`的张量执行某些操作时构建计算图；例如，在训练神经网络时，我们通常不希望通过权重更新步骤进行反向传播。在这种情况下，我们可以使用`torch.no_grad()`上下文管理器来防止构造计算图。
 

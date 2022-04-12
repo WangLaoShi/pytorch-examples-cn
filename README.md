@@ -4,21 +4,7 @@
 
 >**对PyTorch感兴趣的童鞋欢迎看这个**-->[PyTorch教程、例子和书籍合集](https://github.com/bat67/pytorch-tutorials-examples-and-books)
 
-
-## 目录
-
-- [用例子学习PyTorch](#用例子学习pytorch)
-  - [目录](#目录)
-  - [1、简介](#1简介)
-  - [2、环境](#2环境)
-  - [3、目录](#3目录)
-    - [3.1、张量(Tensors)](#31张量tensors)
-    - [3.2、自动求导(Autograd)](#32自动求导autograd)
-    - [3.3、`nn`模块(`nn` module)](#33nn模块nn-module)
-  - [4、类似项目](#4类似项目)
-  - [5、版权信息](#5版权信息)
-
-
+[TOC]
 
 ## 1、简介
 这个repo通过自洽的示例介绍了PyTorch的基本概念。
@@ -38,21 +24,21 @@ PyTorch主要是提供了两个核心的功能特性：
 
 ### 3.1、张量(Tensors)
 
-* [热身：使用NumPy](https://github.com/bat67/pytorch-examples-cn/tree/master/热身%EF%BC%9A使用NumPy)
-* [PyTorch：张量(Tensors)](https://github.com/bat67/pytorch-examples-cn/tree/master/PyTorch%EF%BC%9A张量(Tensors))
+* [热身：使用NumPy](./热身%EF%BC%9A使用NumPy)
+* [PyTorch：张量(Tensors)](./PyTorch%EF%BC%9A张量(Tensors))
 
 ### 3.2、自动求导(Autograd)
 
-* [PyTorch：自动求导(Autograd)](https://github.com/bat67/pytorch-examples-cn/tree/master/PyTorch%EF%BC%9A自动求导(Autograd))
-* [PyTorch：定义自己的自动求导函数](https://github.com/bat67/pytorch-examples-cn/tree/master/PyTorch%EF%BC%9A定义自己的自动求导函数)
-* [TensorFlow：静态图](https://github.com/bat67/pytorch-examples-cn/tree/master/TensorFlow%EF%BC%9A静态图)
+* [PyTorch：自动求导(Autograd)](./PyTorch%EF%BC%9A自动求导(Autograd))
+* [PyTorch：定义自己的自动求导函数](./PyTorch%EF%BC%9A定义自己的自动求导函数)
+* [TensorFlow：静态图](./TensorFlow%EF%BC%9A静态图)
 
 ### 3.3、`nn`模块(`nn` module)
 
-* [PyTorch：神经网络模块nn](https://github.com/bat67/pytorch-examples-cn/tree/master/PyTorch%EF%BC%9A定制神经网络nn模块)
-* [PyTorch：优化模块optim](https://github.com/bat67/pytorch-examples-cn/tree/master/PyTorch%EF%BC%9A优化模块optim)
-* [PyTorch：定制神经网络nn模块](https://github.com/bat67/pytorch-examples-cn/tree/master/PyTorch%EF%BC%9A定制神经网络nn模块)
-* [PyTorch：控制流和参数共享](https://github.com/bat67/pytorch-examples-cn/tree/master/PyTorch%EF%BC%9A控制流和参数共享)
+* [PyTorch：神经网络模块nn](./PyTorch%EF%BC%9A定制神经网络nn模块)
+* [PyTorch：优化模块optim](./PyTorch%EF%BC%9A优化模块optim)
+* [PyTorch：定制神经网络nn模块](./PyTorch%EF%BC%9A定制神经网络nn模块)
+* [PyTorch：控制流和参数共享](./PyTorch%EF%BC%9A控制流和参数共享)
 
 
 ## 4、类似项目

@@ -1,10 +1,10 @@
 # PyTorch：张量(Tensors)
 
-NumPy是一个很棒的框架，但是它不支持GPU以加速运算。现代深度神经网络，GPU常常提供[50倍以上的加速]((https://github.com/jcjohnson/cnn-benchmarks))，所以NumPy不能满足当代深度学习的需求。 
+NumPy是一个很棒的框架，但是它不支持 GPU 以加速运算。现代深度神经网络，GPU 常常提供 [50倍以上的加速](https://github.com/jcjohnson/cnn-benchmarks) ，所以 NumPy 不能满足当代深度学习的需求。 
 
-我们先介绍PyTorch最基础的概念：**张量（Tensor）**。逻辑上，PyTorch的tensor和NumPy array是一样的：tensor是一个n维数组，PyTorch提供了很多函数操作这些tensor。任何希望使用NumPy执行的计算也可以使用PyTorch的tensor来完成；可以认为它们是科学计算的通用工具。
+我们先介绍 PyTorch 最基础的概念：**张量（Tensor）**。逻辑上，PyTorch 的 tensor 和 NumPy array是一样的：tensor 是一个 n 维数组，PyTorch 提供了很多函数操作这些 tensor。任何希望使用 NumPy 执行的计算也可以使用 PyTorch 的 tensor 来完成；可以认为它们是科学计算的通用工具。
 
-和NumPy不同的是，PyTorch可以利用GPU加速。要在GPU上运行PyTorch张量，在构造张量使用`device`参数把tensor建立在GPU上。
+和 NumPy 不同的是，PyTorch 可以利用 GPU 加速。要在 GPU 上运行 PyTorch 张量，在构造张量使用`device`参数把tensor建立在GPU上。
 
 这里我们利用PyTorch的tensor在随机数据上训练一个两层的网络。和前面NumPy的例子类似，我们使用PyTorch的tensor，手动在网络中实现前向传播和反向传播： 
 
